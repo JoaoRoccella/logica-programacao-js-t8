@@ -1,10 +1,13 @@
-// Escreva um código em JavaScript que resolva o problema descrito no livro Lógica de Programação I, p. , em que temos que obter as 3 notas de um aluno, calcular a média e exibir se o aluno foi aprovado, reprovado ou se ficou para exame. Não é necessário ler as notas, você pode defini-las com variáveis.
-// Você precisará utilizar uma estrutura de decisão composta, como a seguir:
+const
+    nota1 = 3,
+    nota2 = 0,
+    nota3 = 7,
+    media = (nota1 + nota2 + nota3) / 3;
 
-if (condicao1) {
-    // código da condição 1
-} else if (condicao2) {
-    // código da condição 2
+if (media >= 7) {
+    console.log(`O aluno foi APROVADO com média ${media.toFixed(2)}`);
+} else if (media >= 5) {
+    console.log(`O aluno está de EXAME com média ${media.toFixed(2)}`);
 } else {
-    // código se nenhuma das condições for verdadeira
+    console.log(`O aluno foi REPROVADO com média ${media.toFixed(2)}`);
 }
