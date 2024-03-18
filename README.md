@@ -139,3 +139,20 @@ Pessoas com muita massa muscular podem ter um IMC alto, mesmo que não sejam obe
 Para mais informações:
 
 Organização Mundial da Saúde (OMS): <https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight>
+
+## desafio3.js
+
+Crie um conversor de temperatura entre as escalas Celsius, Fahrenheit e Kelvin. O usuário deve digitar a temperatura a ser convertida, a escala da temperatura atual e a escala para o qual o valor deve ser convertido.
+
+Entradas (3): valor atual da temperatura, escala atual da temperatura, escala para exibição (conversão).
+
+### Fórmulas:
+
+De | Para | Fórmula
+--- | --- | ----
+Celsius | Fahrenheit | tF = (tC * 9/5) + 32
+Celsius | Kelvin | tK = tC - 273.15
+Fahrenheit | Celsius | tC = (tF - 32) * 5/9
+Fahrenheit | Kelvin | tK = (tF + 459.67) * 5/9
+Kelvin | Celsius | tC = tK + 273.15
+Kelvin | Fahrenheit | tF = (tK - 273.15) * 9/5 + 32
