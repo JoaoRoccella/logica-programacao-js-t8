@@ -153,10 +153,10 @@ Saída (1): valor convertido na escala de conversão.
 De | Para | Fórmula
 --- | --- | ----
 Celsius | Fahrenheit | tF = (tC * 9/5) + 32
-Celsius | Kelvin | tK = tC - 273.15
+Celsius | Kelvin | tK = tC + 273.15
 Fahrenheit | Celsius | tC = (tF - 32) * 5/9
 Fahrenheit | Kelvin | tK = (tF + 459.67) * 5/9
-Kelvin | Celsius | tC = tK + 273.15
+Kelvin | Celsius | tC = tK - 273.15
 Kelvin | Fahrenheit | tF = tK * 9/5 - 459.67
 
 ### Problema adicional
