@@ -146,6 +146,8 @@ Crie um conversor de temperatura entre as escalas Celsius, Fahrenheit e Kelvin. 
 
 Entradas (3): valor atual da temperatura, escala atual da temperatura, escala para exibição (conversão).
 
+Saída (1): valor convertido na escala de conversão.
+
 ### Fórmulas:
 
 De | Para | Fórmula
@@ -156,3 +158,7 @@ Fahrenheit | Celsius | tC = (tF - 32) * 5/9
 Fahrenheit | Kelvin | tK = (tF + 459.67) * 5/9
 Kelvin | Celsius | tC = tK + 273.15
 Kelvin | Fahrenheit | tF = (tK - 273.15) * 9/5 + 32
+
+### Problema adicional
+
+Como executar dois "programas" na mesma página?
