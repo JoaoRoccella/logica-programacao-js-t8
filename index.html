@@ -7,10 +7,30 @@
 </head>
 <body>
     <h1>Programinhas</h1>
+    <!-- TODO: eliminar esses botões -->
     <button type="button" onclick="calculaIMC()">Calculadora IMC</button>
     <button type="button" onclick="converteTemperatura()">Conversor Temperatura</button>
 
+    <h2>Calculadora de IMC</h2>
+
+    <label for="peso">Peso:</label>
+    <input type="number" id="peso" step="0.5" min="0" max="1000">
+
+    <label for="altura">Altura:</label>
+    <input type="number" id="altura" step="0.01" min="0" max="3">
+
+    <button type="button" id="btCalcIMC">Calcular IMC</button>
+    <button type="reset">Limpar</button>
+
     <script src="desafio2.js"></script>
     <script src="desafio3.js"></script>
+    <script>
+        document.querySelector('#btCalcIMC').addEventListener('click', function () {
+            const peso = document.querySelector('#peso').value;
+            const altura = document.querySelector('#altura').value;
+            const imc = calculaIMC(peso, altura);
+            console.log(imc);
+        });
+    </script>
 </body>
 </html>
