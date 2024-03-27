@@ -22,16 +22,45 @@
         <input type="number" id="altura" step="0.01" min="0" max="3">
     
         <button type="button" id="btCalcIMC">Calcular IMC</button>
-        <button type="reset">Limpar</button>
+        <button type="reset" id="btLimpaIMC">Limpar</button>
+        <!-- <button type="reset" id="btLimpaIMC" onclick="document.querySelector('#resultadoIMC').innerHTML = '';">Limpar</button> -->
         
     </form>
 
     <div id="resultadoIMC"></div>
 
+    <h2>Conversor de Temperatura</h2>
+
+    <form action="">
+
+        <label for="valorTemperatura">Temperatura:</label>
+        <input type="number" id="valorTemperatura">
+
+        <label for="escalaAtual">De:</label>
+        <select id="escalaAtual">
+            <option value="C" selected>Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+        </select>
+
+        <label for="escalaConvertida">Para:</label>
+        <select id="escalaConvertida">
+            <option value="C">Celsius</option>
+            <option value="F" selected>Fahrenheit</option>
+            <option value="K">Kelvin</option>
+        </select>
+
+        <button type="button">Converter</button>
+        <button type="reset">Limpar</button>
+
+    </form>
+
 
     <script src="desafio2.js"></script>
     <script src="desafio3.js"></script>
+    
     <script>
+
         document.querySelector('#btCalcIMC').addEventListener('click', function () {
             const peso = document.querySelector('#peso').value;
             const altura = document.querySelector('#altura').value;
@@ -40,6 +69,11 @@
             // (parte de dentro do HTML) -> innerHTML
             document.querySelector('#resultadoIMC').innerHTML = imc;
         });
+
+        document.querySelector('#btLimpaIMC').addEventListener('click', function () {
+            document.querySelector('#resultadoIMC').innerHTML = '';
+        });
+
     </script>
 </body>
 </html>
