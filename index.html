@@ -11,6 +11,7 @@
     <button type="button" onclick="calculaIMC()">Calculadora IMC</button>
     <button type="button" onclick="converteTemperatura()">Conversor Temperatura</button>
 
+
     <h2>Calculadora de IMC</h2>
 
     <form action="" id="formIMC">
@@ -50,10 +51,12 @@
             <option value="K">Kelvin</option>
         </select>
 
-        <button type="button">Converter</button>
-        <button type="reset">Limpar</button>
+        <button type="button" id="btConverteTemp">Converter</button>
+        <button type="reset" id="btLimpaTemp">Limpar</button>
 
     </form>
+
+    <div id="resultadoTemp"></div>
 
 
     <script src="desafio2.js"></script>
@@ -61,6 +64,7 @@
     
     <script>
 
+        // Início Desafio 2
         document.querySelector('#btCalcIMC').addEventListener('click', function () {
             const peso = document.querySelector('#peso').value;
             const altura = document.querySelector('#altura').value;
@@ -73,6 +77,24 @@
         document.querySelector('#btLimpaIMC').addEventListener('click', function () {
             document.querySelector('#resultadoIMC').innerHTML = '';
         });
+        // Fim desafio 2
+
+        // Início Desafio 3
+        document.querySelector('#btConverteTemp').addEventListener('click', function () {
+            const temperaturaAtual = document.querySelector('#valorTemperatura').value; 
+            const escalaAtual = document.querySelector('#escalaAtual').value;
+            const escalaConvertida = document.querySelector('#escalaConvertida').value;
+
+            const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConvertida);
+
+            document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConversao}`;
+        });
+
+        document.querySelector('#btLimpaTemp').addEventListener('click', function () {
+            document.querySelector('#resultadoTemp').innerHTML = '';
+        });
+        // Fim Desafio 3
+
 
     </script>
 </body>

@@ -30,13 +30,19 @@ Faça um programa que calcule o valor total a ser pago por uma pessoa. O program
 
 A saída do programa deve ser o valor total da compra após o processamento e a categoria do desconto aplicado, se houver.
 
+**Dica:** para calcular um percentual de um número, faça a operação `desconto = valor * percentualDesconto / 100`
+
 ## 3. Jogo de Futebol
 
 Desenvolva um programa que receba do usuário o placar de um jogo de futebol (os gols de cada time), e informa se o resultado foi empate, vitória do primeiro time ou vitória do segundo time.
 
+**Desafio extra:** crie uma forma do programa ler o placar no formato "n x n". Exemplo: "7 x 1"
+
 ## 4. Busca de um nome
 
 Desenvolva um programa que permita a leitura dos nomes de 10 pessoas e armazene os nomes lidos em um vetor. Após isso, o programa deve pertmitir a leitura de mais um nome qualquer para ser efetuada uma busca entre os nomes inseridos anteriormente. O programa deve exibir a mensagem _ACHEI_ caso encontre o nome e _NÃO ACHEI_ caso não encontre o nome.
+
+**Dica:** pesquise os métodos disponíveis para manipulação de arrays.
 
 ## 5. Posto de Gasolina
 
@@ -57,7 +63,9 @@ Utilize a tabela de preços:
 
 ## 6. Produtos com desconto
 
-Desenvolva um programa que calcule o desconto da compra de produtos baseado na quantidade de produtos comprados. O programa deve ler o código do produto e a quantidade adquirida. Você pode utilizar uma estrutura de dados JSON para armazenar as informações dos produtos.
+Desenvolva um programa que calcule o desconto da compra de produtos baseado na quantidade de produtos comprados. 
+
+O programa deve ler o código do produto e a quantidade adquirida. Você pode utilizar uma estrutura de dados *JSON* para armazenar as informações dos produtos.
 
 Quantidade | Desconto
 ------ | -------
