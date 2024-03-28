@@ -11,6 +11,7 @@
     <button type="button" onclick="calculaIMC()">Calculadora IMC</button>
     <button type="button" onclick="converteTemperatura()">Conversor Temperatura</button>
 
+
     <h2>Calculadora de IMC</h2>
 
     <form action="" id="formIMC">
@@ -88,6 +89,11 @@
 
             document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConversao}`;
         });
+
+        document.querySelector('#btLimpaTemp').addEventListener('click', function () {
+            document.querySelector('#resultadoTemp').innerHTML = '';
+        });
+        // Fim Desafio 3
 
 
     </script>

@@ -67,7 +67,7 @@ function converteTemperatura(temperaturaAtual, escalaAtual, escalaConversao) {
         escalaConversao: escalaConversao,
         temperaturaConvertida: temperaturaConvertida,
         msgErro: msgErro
-    }; 
+    } 
 
 }
 
