@@ -35,7 +35,7 @@
     <form action="">
 
         <label for="valorTemperatura">Temperatura:</label>
-        <input type="number" id="valorTemperatura">
+        <input type="text" id="valorTemperatura">
 
         <label for="escalaAtual">De:</label>
         <select id="escalaAtual">
@@ -87,13 +87,25 @@
 
             const conversao = converteTemperatura(temperaturaAtual, escalaAtual, escalaConvertida);
 
-            document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + conversao.escalaConversao}`;
+            // Tratamento de erros Desafio 3
+            if (conversao.msgErro === 'Ok') {
+
+                document.querySelector('#resultadoTemp').innerHTML = `Temperatura convertida: ${conversao.temperaturaConvertida + (conversao.grauEscala ? ' °' : ' ') + conversao.escalaConversao}`;
+
+            } else {
+
+                document.querySelector('#resultadoTemp').innerHTML = conversao.msgErro;
+            }
         });
 
         document.querySelector('#btLimpaTemp').addEventListener('click', function () {
             document.querySelector('#resultadoTemp').innerHTML = '';
         });
         // Fim Desafio 3
+
+        // Complemento Desafio 3
+        
+        // Fim Complemento Desafio 3
 
 
     </script>
