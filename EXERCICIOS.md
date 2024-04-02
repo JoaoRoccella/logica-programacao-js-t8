@@ -1,7 +1,3 @@
-# Desafios
-
-1. Reescreva os programas "Cálculo IMC" e "Conversor de Temperatura" para serem executados na própria página HTML
-
 # Exercícios complementares
 
 Desenvolva os exercícios de forma que eles possam ser executados na própria página HTML, SEM UTILIZAR os métodos do objeto `window`. Cada exercício pode ser desenvolvido em uma página HTML exclusiva. Na sua página `index.html`, crie um menu de navegação com o link para cada página de exercício. 

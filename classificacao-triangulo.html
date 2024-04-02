@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de um triângulo</title>
+</head>
+<body>
+    <h1>Classificação de um triângulo</h1>
+    <a href="index.html">↩ Home</a>
+
+    <form action=".">
+
+        <label for="ladoA">Lado A:</label>
+        <input type="number" id="ladoA" min="0">
+
+        <label for="ladoB">Lado B:</label>
+        <input type="number" id="ladoB" min="0">
+
+        <label for="ladoC">Lado C:</label>
+        <input type="number" id="ladoC" min="0">
+
+        <button type="button" id="btClassificar">Classificar</button>
+        <button type="reset" id="btLimpar">Limpar</button>
+        
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        
+        document.querySelector('#btClassificar').addEventListener('click', () => { // arrow function
+
+            // atribuindo e fazendo o casting
+            const ladoA = Number(document.querySelector('#ladoA').value);
+            const ladoB = Number(document.querySelector('#ladoB').value);
+            const ladoC = Number(document.querySelector('#ladoC').value);
+
+            const classificacao = classificaTriangulo(ladoA, ladoB, ladoC);
+
+            document.querySelector('#resultado').innerHTML = classificacao;
+
+        });
+
+        document.querySelector('#btLimpar').addEventListener('click', () => {
+            document.querySelector('#resultado').innerHTML = '';
+        });
+
+
+        function classificaTriangulo(ladoA, ladoB, ladoC) {
+
+            let mensagemErro, tipoTriangulo;
+
+            // teste do triângulo
+            if (ladoA < (ladoB + ladoC) && ladoB < (ladoA + ladoC) && ladoC < (ladoA + ladoB)) {
+
+                // classificação
+
+                if (ladoA === ladoB && ladoB === ladoC) {
+
+                    tipoTriangulo = 'Equilátero';
+
+                } else if (ladoA === ladoB || ladoB === ladoC || ladoA === ladoC) {
+
+                    tipoTriangulo = 'Isósceles';
+
+                } else {
+
+                    tipoTriangulo = 'Escaleno';
+
+                }
+
+                // fim classificação
+
+            } else {
+
+                mensagemErro = 'A forma não é um triângulo';
+            }
+            // fim do teste do triângulo
+
+            return tipoTriangulo ?? mensagemErro;
+            // ?? -> operador de coalescência
+
+        }
+    </script>
+</body>
+</html>

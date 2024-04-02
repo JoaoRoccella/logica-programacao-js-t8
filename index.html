@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Desafios e Exercícios</title>
 </head>
 <body>
-    <h1>Programinhas</h1>
-    <!-- TODO: eliminar esses botões -->
-    <button type="button" onclick="calculaIMC()">Calculadora IMC</button>
-    <button type="button" onclick="converteTemperatura()">Conversor Temperatura</button>
+    <h1>Desafios e Exercícios</h1>
 
+    <h2>Exercícios</h2>
+
+    <nav>
+        <ul>
+            <li><a href="classificacao-triangulo.html">Exercício 1 - Classificação de um triângulo</a></li>
+        </ul>
+    </nav>
 
     <h2>Calculadora de IMC</h2>
 
@@ -58,13 +62,12 @@
 
     <div id="resultadoTemp"></div>
 
-
     <script src="desafio2.js"></script>
     <script src="desafio3.js"></script>
     
     <script>
 
-        // Início Desafio 2
+        // Início Desafio 2 
         document.querySelector('#btCalcIMC').addEventListener('click', function () {
             const peso = document.querySelector('#peso').value;
             const altura = document.querySelector('#altura').value;

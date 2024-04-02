@@ -165,9 +165,20 @@ Como executar dois "programas" na mesma página?
 
 ## desafio4.js
 
-Desenvolva o programa do desafio 3 em uma página HTML, obtendo os dados a partir de um formulário e exibindo o resultado na mesma página.
+Desenvolva o programa do desafio 3 em uma página HTML, obtendo os dados a partir de um formulário e exibindo o resultado na mesma página. Seu programa deve atender aos critérios abaixo:
 
+Orientações:
 * Utilize uma tag `<input>` para obter a temperatura;
 * Utilize tags `<select>` para selecionar as escalas atual e de conversão;
-* Utilize um botão para calcular a temperatura;
-* Apresente o resultado logo abaixo do formulário.
+* Utilize um botão para converter a temperatura;
+* Apresente o resultado logo abaixo do formulário;
+* Utilize um botão para limpar os dados do formulário e o resultado;
+
+Casos de uso:
+* Deve ser apresentado uma mensagem de erro e uma orientação para o usuário, caso aconteça um desses casos:
+    * O valor de temperatura digitado é inválido:
+        * Temperatura nula ou vazia
+        * Caracteres
+        * Valor abaixo do zero absoluto (0 Kelvin ou -273.15 °C ou  -459.67 °F)
+    * A escala atual é igual à de conversão
+    
