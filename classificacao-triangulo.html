@@ -4,40 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classificação de um triângulo</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <a href="index.html">↩ Home</a>
-    <h1>Classificação de um triângulo</h1>
-
-    <form action=".">
-
-        <div class="elementos-em-linha">
-
-            <div class="controle-form">
-                <label for="ladoA">Lado A:</label>
-                <input type="number" id="ladoA" min="0">
-            </div>
-            <!-- O input precisa do ID para ser encontrado pelo javascript no DOM -->
+    <h1 class="titulo-pagina">Classificação de um triângulo</h1>
     
-            <div class="controle-form">
-                <label for="ladoB">Lado B:</label>
-                <input type="number" id="ladoB" min="0">
+    <main>
+    
+        <form action=".">
+    
+            <div class="elementos-em-linha">
+    
+                <div class="controle-form">
+                    <label for="ladoA">Lado A:</label>
+                    <input type="number" id="ladoA" min="0">
+                </div>
+                <!-- O input precisa do ID para ser encontrado pelo javascript no DOM -->
+        
+                <div class="controle-form">
+                    <label for="ladoB">Lado B:</label>
+                    <input type="number" id="ladoB" min="0">
+                </div>
+        
+                <div class="controle-form">
+                    <label for="ladoC">Lado C:</label>
+                    <input type="number" id="ladoC" min="0">
+                </div>
+                
             </div>
     
-            <div class="controle-form">
-                <label for="ladoC">Lado C:</label>
-                <input type="number" id="ladoC" min="0">
+            <div class="botoes">
+                <button type="button" id="btClassificar">Classificar</button>
+                <button type="reset" id="btLimpar">Limpar</button>
             </div>
             
-        </div>
+        </form>
+    
+        <div id="resultado"></div>
 
-        <button type="button" id="btClassificar">Classificar</button>
-        <button type="reset" id="btLimpar">Limpar</button>
-        
-    </form>
-
-    <div id="resultado"></div>
+    </main>
 
     <script>
         
