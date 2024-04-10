@@ -41,14 +41,14 @@ main {
     gap: 1rem;
 }
 
-button {
-    width: 100%;
-    line-height: 2.2;
-}
-
 input {
     width: 100%;
     line-height: 2.2;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    padding-left: 8px;
+    margin-top: 8px;
+    /* outline: none; */
 }
 
 #resultado {
@@ -56,4 +56,51 @@ input {
     height: 2rem;
     margin: 2rem 0 0 0;
     border-radius: 4px;
+    display: flex;
+    flex-direction: row; /* estabelece a direção de alinhamento */
+    justify-content: center; /* alinha no eixo principal */
+    align-items: center; /* alinha no eixo secundário */
 }
+
+button {
+    width: 100%;
+    line-height: 2.2;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: inset 2px 2px 2px #333333;
+}
+
+#btClassificar {
+    background-color: #2078ec;
+    color: #ffffff;
+}
+
+#btClassificar:hover {
+    background-color: #2078ec;
+}
+
+#btClassificar:active {
+    background-color: #1d6dd6;
+}
+
+#btLimpar {
+    background-color: #e85391;
+    color: #ffffff;
+}
+
+#btLimpar:hover {
+    background-color: #e85391;
+}
+
+#btLimpar:active {
+    background-color: #e82375;
+}
+
+
