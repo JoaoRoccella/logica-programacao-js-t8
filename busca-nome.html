@@ -4,32 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busca de um nome</title>
-    <style>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 
-        label[for="nome"] {
-            color: blue;
-        }
+    <style>
 
         .oculto {
             display: none;
+        }
+
+        .acao-alternativa {
+            background-color: #5cf561;
+        }
+        
+        .acao-alternativa:hover {
+            background-color: #5cf561;
+        }
+
+        .acao-alternativa:active {
+            background-color: #2adf30;
         }
 
     </style>
 </head>
 <body>
 
-    <form action="">
+    <h1 class="titulo-pagina">Busca nome</h1>
 
-        <label for="nome">Nome para incluir:</label>
-        <input type="text" id="nome" required autofocus>
+    <main>
 
-        <button type="reset" id="btCadastrar">Cadastrar</button>
+        <form action="">
+    
+            <div class="controle-form">
+                <label for="nome">Nome para incluir:</label>
+                <input type="text" id="nome" required autofocus>
+            </div>
+    
+            <div class="botoes">
+                <button type="reset" id="btCadastrar" class="acao-positiva">Cadastrar</button>
+        
+                <button type="button" id="btPesquisar" class="oculto acao-alternativa">Pesquisar</button>
+            </div>
+    
+        </form>
+    
+        <div id="resultado"></div>
 
-        <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
-
-    </form>
-
-    <div id="resultado"></div>
+    </main>
     
     <script>
         

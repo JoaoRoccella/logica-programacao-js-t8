@@ -77,29 +77,29 @@ button:active {
     box-shadow: inset 2px 2px 2px #333333;
 }
 
-#btClassificar {
+.acao-positiva {
     background-color: #2078ec;
     color: #ffffff;
 }
 
-#btClassificar:hover {
+.acao-positiva:hover {
     background-color: #2078ec;
 }
 
-#btClassificar:active {
+.acao-positiva:active {
     background-color: #1d6dd6;
 }
 
-#btLimpar {
+.acao-negativa {
     background-color: #e85391;
     color: #ffffff;
 }
 
-#btLimpar:hover {
+.acao-negativa:hover {
     background-color: #e85391;
 }
 
-#btLimpar:active {
+.acao-negativa:active {
     background-color: #e82375;
 }
 
