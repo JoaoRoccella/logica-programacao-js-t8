@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 | Produtos com desconto</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1 class="titulo-pagina">Produtos com desconto</h1>
+
+    <main>
+
+        <form action="">
+
+            <div class="controle-form">
+                <label for="codigoProduto">Código do produto:</label>
+                <input type="number" id="codigoProduto" required autofocus>
+            </div>
+
+            <div class="controle-form">
+                <label for="qtdeProduto">Quantidade:</label>
+                <input type="number" id="qtdeProduto" required>
+            </div>
+
+            <div class="botoes">
+                <button type="button" class="acao-positiva" id="btCalcular">Calcular</button>
+                <button type="reset" class="acao-negativa">Limpar</button>
+            </div>
+        </form>
+
+        <div id="resultado"></div>
+
+    </main>
+
+    <script>
+
+        document.querySelector('#btCalcular').addEventListener('click', () => {
+
+            const codigoProduto = Number(document.querySelector('#codigoProduto').value);
+
+            const qtdeProduto = Number(document.querySelector('#qtdeProduto').value);
+
+            const produto = calculaDesconto(codigoProduto, qtdeProduto);
+
+            document.querySelector('#resultado').innerHTML = produto.valorFinal.toFixed(2);
+
+        });
+
+        // JSON -> JavaScript Object Notation
+        const produtos = [
+            {
+                codigo: 1,
+                preco: 5.99,
+                descricao: "Salgado"
+            },
+            {
+                codigo: 2,
+                preco: 4.50,
+                descricao: "Snickers"
+            },
+            {
+                codigo: 3,
+                preco: 0.5,
+                descricao: "Quebra-queixo"
+            }
+        ];
+
+        function calculaDesconto(codigoProduto, qtdeProduto) {
+
+            let preco;
+            let descricao;
+            let desconto;
+            let valorFinal;
+
+            // percorre o vetor de produtos para pesquisa
+            for (let i = 0; i < produtos.length; i++) {
+
+                // se o código for igual ao procurado, obtém o preco
+                if (produtos[i].codigo === codigoProduto) {
+
+                    preco = produtos[i].preco;
+                    descricao = produtos[i].descricao;
+                }
+            }
+
+            // atribui o desconto com base na quantidade comprada
+            if (qtdeProduto >= 3 && qtdeProduto <= 5) {
+
+                desconto = 0.02;
+
+            } else if (qtdeProduto >= 6 && qtdeProduto <= 10) {
+
+                desconto = 0.03;
+
+            } else if (qtdeProduto > 10) {
+
+                desconto = 0.05;
+
+            } else {
+
+                desconto = 0;
+
+            }
+
+            valorFinal = (preco * qtdeProduto) - (preco * qtdeProduto * desconto);
+
+            return {
+                codigo: codigoProduto,
+                preco: preco,
+                descricao: descricao,
+                valorFinal: valorFinal
+            };
+
+
+        }
+    </script>
+
+</body>
+
+</html>
