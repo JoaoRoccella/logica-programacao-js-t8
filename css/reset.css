@@ -46,3 +46,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/*** Reset personalizado ***/
+
+a {
+	cursor: initial; /* retira estilos de cursor */
+	text-decoration: none;
+}

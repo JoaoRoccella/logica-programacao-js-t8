@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.logo-menu {
+    display: flex;
+    background-color: #38393C;
+    height: 65px;
+    justify-content: space-between;
+}
+
+.logo span {
+    color: azure;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    margin-inline-start: 2.5rem;
+}
+
+.menu-navegacao {
+    background-color: #38393C;
+}
+
+.menu-navegacao>ul {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.menu-navegacao a {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    color: ghostwhite;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem; /* 120% do tamanho padrão */
+    padding: 0 1rem;
+}
+
+.menu-navegacao a:hover {
+    cursor: pointer;
+    background-color: ghostwhite;
+    color: #38393C;
+    transition-duration: 300ms;
+}
+
+.breadcrumbs {
+    height: 50px;
+}
+
+.breadcrumbs>ul {
+    height: 100%;
+    display: flex;
+    margin-inline-start: 1.5rem;
+}
+
+.breadcrumbs li {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: ">";
+} /* aplica para todos os elementos, menos (não) para o último filho */
+
+.breadcrumbs li:not(:last-child)>a {
+    color: #777;
+} /* aplica para todo <a> filho de <li>, menos (não) para o <a> filho do <li> que é último filho, descendente de .breadcrumbs */
+
+.breadcrumbs a {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.breadcrumbs li:last-child>a {
+    background-color: #38393C;
+    color: azure;
+    padding: 8px;
+    border-radius: 16px;
+    margin-inline-start: 8px;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.breadcrumbs li:last-child>a:hover {
+    text-decoration: none;
+    cursor:default;
+}  
+
+.breadcrumbs li:last-child>a:hover {
+    text-decoration: none;
+    cursor: default;
+}
