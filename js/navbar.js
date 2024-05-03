@@ -1,29 +1,20 @@
 // <a> do Home
-const aHome = document.createElement('a');
-aHome.setAttribute('href', '/index.html');
-aHome.innerHTML = 'Home';
+const aHome = criaAncora('/index.html', 'Home');
 
 // <li> do Home
-const liHome = document.createElement('li');
-liHome.appendChild(aHome);
+const liHome = criaLi(aHome);
 
 // <a> do exercício 1
-const aExercicio1 = document.createElement('a');
-aExercicio1.setAttribute('href', '/exercicios/exercicio1.html');
-aExercicio1.innerHTML = 'Exerc. 1';
+const aExercicio1 = criaAncora('/exercicios/exercicio1.html', 'Exerc. 1');
 
 // <li> do exercício 1
-const liExercicio1 = document.createElement('li');
-liExercicio1.appendChild(aExercicio1);
+const liExercicio1 = criaLi(aExercicio1);
 
 // <a> do exercício 6
-const aExercicio6 = document.createElement('a');
-aExercicio6.setAttribute('href', '/exercicios/exercicio6.html');
-aExercicio6.innerHTML = 'Exerc. 6';
+const aExercicio6 = criaAncora('/exercicios/exercicio6.html', 'Exerc. 6');
 
 // <li> do exercício 6
-const liExercicio6 = document.createElement('li');
-liExercicio6.appendChild(aExercicio6);
+const liExercicio6 = criaLi(aExercicio6);
 
 // <ul> do menu
 const ulNav = document.createElement('ul');
@@ -50,6 +41,7 @@ const divLogoMenu = document.createElement('div');
 divLogoMenu.classList.add('logo-menu');
 divLogoMenu.append(divLogo, nav);
 
+// <header>
 const header = document.createElement('header');
 header.appendChild(divLogoMenu);
 
@@ -57,9 +49,27 @@ header.appendChild(divLogoMenu);
 document.body.insertAdjacentElement('afterbegin', header);
 
 
-// Estilos do Navbar
+// ** Estilos do Navbar **
 const linkNavbar = document.createElement('link');
 linkNavbar.setAttribute('rel', 'stylesheet');
 linkNavbar.setAttribute('href', '/css/navbar.css');
 
 document.head.appendChild(linkNavbar);
+
+function criaAncora(url, texto) {
+
+    const ancora = document.createElement('a');
+    ancora.setAttribute('href', url);
+    ancora.innerHTML = texto;
+
+    return ancora;
+}
+
+// Crie uma função e a utilize para gerar os elementos do tipo <li>
+function criaLi(ancora) {
+    
+    const li = document.createElement('li');
+    li.appendChild(ancora);
+    
+    return li;
+}

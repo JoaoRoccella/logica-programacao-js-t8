@@ -5,7 +5,7 @@
 3. Abrir o repositório no GitHub
 4. Copiar a url do repositório (HTTPS)
 5. Abrir o VS Code
-6. Se houver algum projeto aberto no VS Code, então feche (CTRL + K F)
+6. **Se houver algum projeto aberto no VS Code, então feche (CTRL + K F)**
 7. Se houver algum usuário logado no VS Code, então clique 'Sair'
 8. Verifique as variáveis `user.name` e `user.email` globais:
 ~~~bash
