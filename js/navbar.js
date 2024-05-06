@@ -1,29 +1,48 @@
-// <a> do Home
-const aHome = criaAncora('/index.html', 'Home');
+const ancoras = [
+    { "url": "/index.html", "texto": "Home" },
+    { "url": "/exercicios/exercicio1.html", "texto": "Exerc. 1" },
+    { "url": "/exercicios/exercicio2.html", "texto": "Exerc. 2" },
+    { "url": "/exercicios/exercicio3.html", "texto": "Exerc. 3" },
+    { "url": "/exercicios/exercicio4.html", "texto": "Exerc. 4" },
+    { "url": "/exercicios/exercicio5.html", "texto": "Exerc. 5" },
+    { "url": "/exercicios/exercicio6.html", "texto": "Exerc. 6" },
+    { "url": "/exercicios/exercicio7.html", "texto": "Exerc. 7" }
+];
 
-// <li> do Home
-const liHome = criaLi(aHome);
+function criaAncora(url, texto) {
 
-// <a> do exercício 1
-const aExercicio1 = criaAncora('/exercicios/exercicio1.html', 'Exerc. 1');
+    const ancora = document.createElement('a');
+    ancora.setAttribute('href', url);
+    ancora.innerHTML = texto;
 
-// <li> do exercício 1
-const liExercicio1 = criaLi(aExercicio1);
+    return ancora;
+}
 
-// <a> do exercício 6
-const aExercicio6 = criaAncora('/exercicios/exercicio6.html', 'Exerc. 6');
+function criaLi(ancora) {
+    
+    const li = document.createElement('li');
+    li.appendChild(ancora);
+    
+    return li;
+}
 
-// <li> do exercício 6
-const liExercicio6 = criaLi(aExercicio6);
+function criaUlNav(ancoras) {
 
-// <ul> do menu
-const ulNav = document.createElement('ul');
-ulNav.append(liHome, liExercicio1, liExercicio6);
+    const ul = document.createElement('ul');
+
+    ancoras.forEach(ancora => {
+        const a = criaAncora(ancora.url, ancora.texto);
+        const li = criaLi(a);
+        ul.appendChild(li);
+    });
+
+    return ul;
+}
 
 // <nav> do menu
 const nav = document.createElement('nav');
 nav.classList.add('menu-navegacao');
-nav.appendChild(ulNav);
+nav.appendChild(criaUlNav(ancoras));
 
 // Aqui segue de acordo com a solução do professor...
 
@@ -56,20 +75,3 @@ linkNavbar.setAttribute('href', '/css/navbar.css');
 
 document.head.appendChild(linkNavbar);
 
-function criaAncora(url, texto) {
-
-    const ancora = document.createElement('a');
-    ancora.setAttribute('href', url);
-    ancora.innerHTML = texto;
-
-    return ancora;
-}
-
-// Crie uma função e a utilize para gerar os elementos do tipo <li>
-function criaLi(ancora) {
-    
-    const li = document.createElement('li');
-    li.appendChild(ancora);
-    
-    return li;
-}
