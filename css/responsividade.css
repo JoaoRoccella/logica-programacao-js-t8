@@ -1,0 +1,58 @@
+/* 
+    Estilos para outros tamanhos de telas:
+    Mobile -> até 420px
+    Tablet -> até 768px
+    TVs -> Maior que 1920px
+*/
+
+/* Mobile */
+@media screen and (max-width: 420px) {
+
+    .titulo-pagina, 
+    main {
+        width: 90%;
+    }
+    
+    .titulo-pagina {
+        font-size: 1.8rem;
+    }
+
+    .elementos-em-linha,
+    .botoes {
+        flex-direction: column;
+    }
+
+    .logo-menu {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .logo {
+        height: 65px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo span {
+        font-size: 1.6rem;
+        margin-inline-start: 0;
+    }
+
+    .menu-navegacao ul {
+        flex-direction: column;
+    }
+
+    .menu-navegacao li {
+        height: 3rem;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+
+}
+
+/* TVs */
+@media screen and (min-width: 1921px) {
+    
+}

@@ -46,6 +46,12 @@ nav.appendChild(criaUlNav(ancoras));
 
 // Aqui segue de acordo com a solução do professor...
 
+// Implementação do menu sanduíche
+
+const iMenuSanduba = document.createElement('i');
+iMenuSanduba.innerHTML = "☰";
+iMenuSanduba.style.color = "#fff";
+
 // <span>Desafios & Exercícios</span>
 const spanLogo = document.createElement('span');
 spanLogo.innerHTML = 'Desafios & Exercícios';
@@ -53,7 +59,7 @@ spanLogo.innerHTML = 'Desafios & Exercícios';
 // <div class="logo">
 const divLogo = document.createElement('div');
 divLogo.classList.add('logo');
-divLogo.appendChild(spanLogo);
+divLogo.append(iMenuSanduba, spanLogo);
 
 // <div class="logo-menu">
 const divLogoMenu = document.createElement('div');
@@ -73,5 +79,5 @@ const linkNavbar = document.createElement('link');
 linkNavbar.setAttribute('rel', 'stylesheet');
 linkNavbar.setAttribute('href', '/css/navbar.css');
 
-document.head.appendChild(linkNavbar);
+document.querySelector('[href="/css/responsividade.css"]').insertAdjacentElement('beforebegin', linkNavbar);
 
