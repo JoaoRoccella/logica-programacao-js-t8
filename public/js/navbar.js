@@ -1,12 +1,12 @@
 const ancoras = [
-    { "url": "/index.html", "texto": "Home" },
-    { "url": "/exercicios/exercicio1.html", "texto": "Exerc. 1" },
-    { "url": "/exercicios/exercicio2.html", "texto": "Exerc. 2" },
-    { "url": "/exercicios/exercicio3.html", "texto": "Exerc. 3" },
-    { "url": "/exercicios/exercicio4.html", "texto": "Exerc. 4" },
-    { "url": "/exercicios/exercicio5.html", "texto": "Exerc. 5" },
-    { "url": "/exercicios/exercicio6.html", "texto": "Exerc. 6" },
-    { "url": "/exercicios/exercicio7.html", "texto": "Exerc. 7" }
+    { "url": "../index.html", "texto": "Home" },
+    { "url": "../exercicios/exercicio1.html", "texto": "Exerc. 1" },
+    { "url": "../exercicios/exercicio2.html", "texto": "Exerc. 2" },
+    { "url": "../exercicios/exercicio3.html", "texto": "Exerc. 3" },
+    { "url": "../exercicios/exercicio4.html", "texto": "Exerc. 4" },
+    { "url": "../exercicios/exercicio5.html", "texto": "Exerc. 5" },
+    { "url": "../exercicios/exercicio6.html", "texto": "Exerc. 6" },
+    { "url": "../exercicios/exercicio7.html", "texto": "Exerc. 7" }
 ];
 
 function criaAncora(url, texto) {
@@ -77,7 +77,7 @@ document.body.insertAdjacentElement('afterbegin', header);
 // ** Estilos do Navbar **
 const linkNavbar = document.createElement('link');
 linkNavbar.setAttribute('rel', 'stylesheet');
-linkNavbar.setAttribute('href', '/css/navbar.css');
+linkNavbar.setAttribute('href', '../css/navbar.css');
 
-document.querySelector('[href="/css/responsividade.css"]').insertAdjacentElement('beforebegin', linkNavbar);
+document.querySelector('[href="../css/responsividade.css"]').insertAdjacentElement('beforebegin', linkNavbar);
 
